@@ -1,7 +1,7 @@
 /* Global Styles */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 150px;
 }
 
 body {
@@ -31,7 +31,6 @@ header {
     top: 0;
     z-index: 1000;
     flex-wrap: wrap;
-    text-align: center;
 }
 
 .title {
@@ -46,16 +45,19 @@ header {
     color: #ffe8e8;
 }
 
-.header-right {
+/* Header Actions */
+.header-actions {
     display: flex;
     align-items: center;
     gap: 1em;
+    flex-wrap: nowrap;
 }
 
+/* Phone Button */
 .header-phone {
     background-color: #d87288;
     color: white;
-    padding: 0.3em;
+    padding: 0.5em;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -72,7 +74,26 @@ header {
     transform: scale(1.1);
 }
 
-/* Navigation */
+/* Book Now Button */
+.book-now-button {
+    background-color: #ffffff;
+    color: #d87288;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5em 1.2em;
+    border: 2px solid #d87288;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.book-now-button:hover {
+    background-color: #d87288;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Navigation Menu */
 .nav-menu {
     display: flex;
     gap: 1em;
@@ -83,50 +104,13 @@ header {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1rem;
-    background-color: #e8899a;
     padding: 0.5em 1em;
     border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
-.nav-menu a:hover,
-.nav-menu a:focus {
+.nav-menu a:hover {
     background-color: #d87288;
-    outline: 2px solid white;
-    outline-offset: 2px;
-}
-
-/* Book Now Button */
-.book-now-button {
-    background-color: #d87288;
-    font-weight: bold;
-    padding: 0.5em 1.2em;
-    border-radius: 25px;
-    border: 2px solid white;
-    color: white;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.book-now-button:hover {
-    background-color: #b85b6e;
-    border-color: white;
-}
-
-/* Social Media Links */
-.social-links {
-    display: flex;
-    gap: 0.5em;
-}
-
-.social-links a {
-    font-size: 1.5rem;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #ffe8e8;
 }
 
 /* Hero Section */
@@ -159,7 +143,6 @@ header {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1rem;
     background-color: #e8899a;
     padding: 0.8em 1.5em;
     border-radius: 25px;
@@ -170,77 +153,66 @@ header {
     background-color: #d87288;
 }
 
-/* Shared Section Styling */
-.about,
-.services,
-.contact-section {
+/* Services Section */
+.services {
     padding: 2.5em 1em;
     background-color: #fff8f0;
     text-align: center;
 }
 
-.about h2,
-.services h2,
-.contact-section h2 {
+.services h2 {
     font-size: 2rem;
     margin-bottom: 1em;
-    color: #333;
-}
-
-.about p,
-.contact-section p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 1.5em;
-    line-height: 1.8;
-}
-
-.about strong {
     color: #e8899a;
+    font-weight: bold;
 }
 
-/* Services Section */
 .services table {
     margin: 0 auto;
     border-collapse: collapse;
     width: 95%;
     max-width: 800px;
     font-size: 1rem;
-    text-align: left;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.services th,
-.services td {
-    padding: 1.2em;
-    border-bottom: 1px solid #ddd;
-}
-
 .services th {
     background-color: #e8899a;
     color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
+    text-align: left;
+    padding: 1em;
 }
 
 .services td {
-    color: #444;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    color: #555;
 }
 
 .services td[colspan="3"] {
-    font-size: 1.2rem;
     font-weight: bold;
     background-color: #ffe5ea;
     color: #e8899a;
+    text-align: center;
+}
+
+.services-note {
+    margin-top: 1em;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
 }
 
 /* Contact Section */
 .contact-section {
-    padding-bottom: 3em;
+    padding: 3em 1em;
     background-color: #fff8f0;
-    margin-top: 2em;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #contact-form {
@@ -249,7 +221,7 @@ header {
     padding: 2em;
     border: 2px solid #e8899a;
     border-radius: 15px;
-    background-color: #fff8f0;
+    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -258,6 +230,7 @@ header {
     font-size: 1rem;
     color: #333;
     margin-bottom: 0.5em;
+    text-align: left;
 }
 
 #contact-form input,
@@ -271,68 +244,64 @@ header {
     border-radius: 5px;
     background-color: white;
     color: #444;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contact-form input:focus,
-#contact-form select:focus,
-#contact-form textarea:focus {
-    border-color: #d87288;
-    box-shadow: 0 0 5px rgba(216, 114, 136, 0.5);
+    box-sizing: border-box;
 }
 
 #contact-form button {
     background-color: #e8899a;
     color: white;
-    border: 2px solid #e8899a;
     font-size: 1rem;
     font-weight: bold;
     padding: 0.7em 1.5em;
     border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #contact-form button:hover {
-    background-color: #d87288;
+    background-color: #b85b6e;
+    transform: scale(1.05);
 }
 
-/* Hamburger Icon Styling */
-.hamburger {
+#success-message {
     display: none;
+    color: green;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 2rem;
-    height: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+    align-items: center;
+    gap: 1em;
 }
 
-.hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.footer-links {
+    display: flex;
+    gap: 1.5em;
 }
 
-.hamburger span+span {
-    margin-top: 4px;
+.footer-links a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(6px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-6px);
+.footer-links a:hover {
+    color: #e8899a;
+    transform: scale(1.1);
 }
 
 /* Responsive Adjustments */
@@ -340,298 +309,19 @@ header {
     header {
         flex-direction: column;
         align-items: center;
-        padding: 0.5em 1em;
     }
 
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #ffe8e8;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1em 0;
+    .header-actions {
+        justify-content: center;
+        gap: 0.8em;
     }
 
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .header-right {
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    .header-phone {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-    }
-
-    body {
+    .services table {
         font-size: 0.9rem;
     }
 
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .cta-button,
-    .book-now-button {
-        font-size: 0.9rem;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
-/* Footer */
-footer {
-    background-color: #444;
-    color: white;
-    text-align: center;
-    padding: 2em 0;
-    font-size: 0.9rem;
-}
-
-/* Footer */
-footer {
-    background-color: #444;
-    color: white;
-    text-align: center;
-    padding: 2em 0 3em;
-    font-size: 0.9rem;
-    position: relative;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-}
-
-/* Footer Phone Button */
-.footer-phone {
-    background-color: #d87288;
-    color: white;
-    padding: 0.5em;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    /* Remove underline */
-}
-
-.footer-phone:hover {
-    background-color: #b85b6e;
-    /* Darker pink on hover */
-}
-
-/* Social Media Links */
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-.footer-links a {
-    font-size: 1.5rem;
-    color: white;
-    /* Default color */
-    text-decoration: none;
-    /* Remove underline */
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: #e8899a;
-    /* Highlight on hover */
-    transform: scale(1.1);
-    /* Slight zoom */
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .footer-phone {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-    }
-
-    .footer-links a {
-        font-size: 1.2rem;
-        /* Smaller icons */
-    }
-}
-
-/* Footer */
-footer {
-    background-color: #444;
-    color: white;
-    text-align: center;
-    padding: 2em 0;
-    font-size: 0.9rem;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-}
-
-/* Footer Phone Button */
-.footer-phone {
-    background-color: #d87288;
-    color: white;
-    padding: 0.5em;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-    position: relative;
-    /* Fix positioning issues */
-}
-
-.footer-phone:hover {
-    background-color: #b85b6e;
-}
-
-/* Social Media Links */
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
-    /* Add spacing between icons */
-}
-
-.footer-links a {
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-    /* Remove underline */
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: #e8899a;
-    transform: scale(1.1);
-    /* Slight zoom on hover */
-}
-
-/* Fix Blue Icon Styling */
-.footer-links a i {
-    color: white;
-    /* Force icon color to white */
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .footer-phone {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-    }
-
-    .footer-links a {
-        font-size: 1.2rem;
-        /* Smaller icons */
-    }
-}
-
-/* Footer */
-footer {
-    background-color: #444;
-    color: white;
-    text-align: center;
-    padding: 2em 0;
-    font-size: 0.9rem;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-}
-
-/* Footer Phone Button */
-.footer-phone {
-    background-color: #d87288;
-    color: white;
-    padding: 0.5em;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-    position: relative;
-    /* Fix positioning issues */
-}
-
-.footer-phone:hover {
-    background-color: #b85b6e;
-}
-
-/* Social Media Links */
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
-    /* Add spacing between icons */
-}
-
-.footer-links a {
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-    /* Remove underline */
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: #e8899a;
-    transform: scale(1.1);
-    /* Slight zoom on hover */
-}
-
-/* Fix Blue Icon Styling */
-.footer-links a i {
-    color: white;
-    /* Force icon color to white */
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .footer-phone {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-    }
-
-    .footer-links a {
-        font-size: 1.2rem;
-        /* Smaller icons */
+    .contact-section {
+        max-width: 100%;
+        padding: 2em 1em;
     }
 }

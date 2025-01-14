@@ -21,28 +21,22 @@
   <body>
     <header>
       <a href="#home" class="title">Pawlish Mobile Grooming</a>
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
       <nav class="nav-menu">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact Me</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+8162867417" class="header-phone" aria-label="Call me">
+          <i class="fas fa-phone-alt"></i>
+        </a>
         <a
           href="https://app.squareup.com/appointments/buyer/widget/icwpdiyqxdvs1q/LD1P9PCWZE92Q"
           target="_blank"
           class="book-now-button"
           >Book Now</a
         >
-      </nav>
-      <!-- Social Media Links -->
-      <div class="header-right">
-        <a href="tel:+8162867417" class="header-phone" aria-label="Call me">
-          <i class="fas fa-phone-alt"></i>
-        </a>
       </div>
     </header>
 
@@ -54,7 +48,6 @@
       </p>
       <div class="cta-buttons">
         <a href="#services" class="cta-button">Explore Services</a>
-
         <a
           href="https://app.squareup.com/appointments/buyer/widget/icwpdiyqxdvs1q/LD1P9PCWZE92Q"
           target="_blank"
@@ -112,9 +105,9 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Add-On Services -->
+          <!-- Walk-In Services -->
           <tr>
-            <td colspan="3">Add-On Services</td>
+            <td colspan="3">Walk-In Services</td>
           </tr>
           <tr>
             <td>Nail Trim</td>
@@ -139,40 +132,25 @@
 
           <!-- Bath and Brush -->
           <tr>
-            <td colspan="3">Bath and Brush</td>
+            <td colspan="3">Bath and Brush Packages</td>
           </tr>
           <tr>
-            <td>Short Hair – S</td>
+            <td>Small Breeds</td>
             <td>$30</td>
             <td>30-40 min</td>
           </tr>
           <tr>
-            <td>Long Hair – S</td>
+            <td>Medium Breeds</td>
             <td>$35</td>
             <td>1 hr</td>
           </tr>
           <tr>
-            <td>Short Hair – M</td>
-            <td>$35</td>
-            <td>1 hr</td>
-          </tr>
-          <tr>
-            <td>Long Hair – M</td>
-            <td>$35</td>
-            <td>1 hr</td>
-          </tr>
-          <tr>
-            <td>Short Hair – L</td>
+            <td>Large Breeds</td>
             <td>$39</td>
             <td>1.5 hr</td>
           </tr>
           <tr>
-            <td>Long Hair – L</td>
-            <td>$47</td>
-            <td>2 hr</td>
-          </tr>
-          <tr>
-            <td>XL</td>
+            <td>Extra-Large Breeds</td>
             <td>$55</td>
             <td>2.5 hr</td>
           </tr>
@@ -180,60 +158,62 @@
           <!-- Grooming Packages -->
           <tr>
             <td colspan="3">
-              Grooming Packages
+              Full Grooming Packages
               <p>
-                (Includes Bath, Haircut, Nail Trimming, Ear Cleaning, Anal Gland
+                (Includes Bath, Haircut, Nail Trim, Ear Cleaning, Anal Gland
                 Expression)
               </p>
             </td>
           </tr>
           <tr>
-            <td>Small (< 25 lbs)</td>
+            <td>Small Breeds</td>
             <td>$60</td>
             <td>1 hr</td>
           </tr>
           <tr>
-            <td>Medium (25-50 lbs)</td>
+            <td>Medium Breeds</td>
             <td>$75</td>
             <td>1.5 hr</td>
           </tr>
           <tr>
-            <td>Large (50-70 lbs)</td>
+            <td>Large Breeds</td>
             <td>$95</td>
             <td>2 hr</td>
           </tr>
         </tbody>
       </table>
+      <p class="services-note">
+        <em>
+          Mobile grooming services are offered at a 20-50% premium. Please
+          contact me for more details.
+        </em>
+      </p>
     </section>
 
-    <section id="contact" class="contact container">
+    <section id="contact" class="contact-section">
       <h2>Contact Me</h2>
       <p>
         Have questions or want to book an appointment? Feel free to reach out!
       </p>
       <form
         id="contact-form"
-        action="mailto:zhangpingjielun@gmail.com"
-        method="post"
-        enctype="text/plain"
+        action="https://formspree.io/f/xyzzvgbq"
+        method="POST"
       >
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
 
-        <label for="email">Email (optional):</label>
-        <input type="email" id="email" name="email" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" />
+        <input type="tel" id="phone" name="phone" pattern="\d{10}" />
 
-        <label for="service">Select a Desired Service:</label>
+        <label for="service">Desired Service:</label>
         <select id="service" name="service" required>
           <option value="" disabled selected>Select an option</option>
           <option value="Walk-In">Walk-In</option>
           <option value="Bath and Brush">Bath and Brush</option>
-          <option value="Grooming Package">Grooming Package</option>
-          <option value="Boarding">Boarding</option>
-          <option value="Other">Other</option>
         </select>
 
         <label for="message">Your Message:</label>
@@ -241,6 +221,9 @@
 
         <button type="submit">Send</button>
       </form>
+      <p id="success-message">
+        Thank you for contacting us! We’ll get back to you soon.
+      </p>
     </section>
 
     <footer>
@@ -249,6 +232,12 @@
         <a href="tel:+8162867417" class="footer-phone" aria-label="Call Me">
           <i class="fas fa-phone-alt"></i>
         </a>
+        <a
+          href="https://app.squareup.com/appointments/buyer/widget/icwpdiyqxdvs1q/LD1P9PCWZE92Q"
+          target="_blank"
+          class="book-now-button"
+          >Book Now</a
+        >
         <div class="footer-links">
           <a
             href="https://www.facebook.com"
@@ -268,35 +257,6 @@
       </div>
     </footer>
 
-    <script>
-      // Toggle menu when the hamburger button is clicked
-      document
-        .querySelector(".hamburger")
-        .addEventListener("click", function () {
-          const navMenu = document.querySelector(".nav-menu");
-          navMenu.classList.toggle("active");
-        });
-
-      // Collapse menu when a navigation link is clicked
-      document.querySelectorAll(".nav-menu a").forEach((link) => {
-        link.addEventListener("click", function () {
-          const navMenu = document.querySelector(".nav-menu");
-          navMenu.classList.remove("active");
-        });
-      });
-    </script>
-    <script>
-      function validateContactForm() {
-        const email = document.getElementById("email").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-
-        if (!email && !phone) {
-          alert("Please provide either an email or a phone number.");
-          return false;
-        }
-
-        return true;
-      }
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
