@@ -1,0 +1,394 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    /* Accounts for the sticky header */
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    background-color: #faf3e0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #e8899a;
+    color: white;
+    padding: 0.7em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+header .logo svg {
+    width: 40px;
+    height: 40px;
+}
+
+header .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    /* Default for larger screens */
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #e8899a;
+    /* Main pink */
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    background-color: #d87288;
+    color: #fff;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3em 1em;
+    background-color: #fff8f0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5em;
+    color: #555;
+}
+
+.hero .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.hero .cta-button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #e8899a;
+    padding: 0.8em 1.5em;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero .cta-button:hover,
+.hero .cta-button:focus {
+    background-color: #d87288;
+    color: #fff;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* About Section */
+.about {
+    padding: 2.5em 1em;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+}
+
+.about strong {
+    color: #e8899a;
+}
+
+/* Services Section */
+.services {
+    padding: 2.5em 1em;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.services table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 95%;
+    max-width: 800px;
+    font-size: 1rem;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services th,
+.services td {
+    padding: 1.2em;
+    border-bottom: 1px solid #ddd;
+}
+
+.services th {
+    background-color: #e8899a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.services td {
+    color: #444;
+}
+
+.services td[colspan="3"] {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ffe5ea;
+    color: #e8899a;
+    text-align: left;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff8f0;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.contact form {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+}
+
+.contact label {
+    display: block;
+    margin-top: 1em;
+    font-size: 1rem;
+    color: #444;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 1px solid #e8899a;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact button {
+    background-color: #e8899a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact button:hover,
+.contact button:focus {
+    background-color: #d87288;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 0.9rem;
+}
+/* Social Media Links Styling */
+.social-links,
+.social-links-footer,
+.social-links-about {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.social-links a,
+.social-links-footer a,
+.social-links-about a {
+    font-size: 1.5rem;
+    /* Icon size */
+    color: #444;
+    /* Default color */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links-footer a:hover,
+.social-links-about a:hover {
+    color: #e8899a;
+    /* Pink hover effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger button on smaller screens */
+        margin: 0 auto;
+        /* Center under the title */
+    }
+
+    .nav-menu {
+        display: none;
+        /* Hide by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffe8e8;
+        /* Soft blush background */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1em 0;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        /* Show menu when active */
+        background-color: #fddede;
+        /* Slightly deeper blush */
+    }
+
+    .nav-menu a {
+        padding: 1em;
+        text-align: center;
+        width: 100%;
+        border-radius: 0;
+        color: #333;
+        /* Darker text for contrast */
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+        background-color: #d87288;
+        color: #fff;
+    }
+    
+    .social-links,
+    .social-links-footer,
+    .social-links-about {
+        gap: 0.8em;
+        margin-top: 1em;
+    }
+}/* Social Media Links Styling */
+.social-links,
+.social-links-footer,
+.social-links-about {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.social-links-footer {
+    margin-top: 1.5em;
+    /* Adds space in the footer */
+}
+
+.social-links a,
+.social-links-footer a,
+.social-links-about a {
+    font-size: 1.5rem;
+    /* Icon size */
+    color: #fff;
+    /* White for footer */
+    transition: color 0.3s ease;
+}
+
+.social-links-footer a:hover,
+.social-links-about a:hover {
+    color: #e8899a;
+    /* Pink hover effect */
+}
+
+/* Ensure visibility in the footer */
+footer .social-links-footer a {
+    color: #fff;
+    /* White icons in the footer */
+}
+
+footer .social-links-footer a:hover {
+    color: #e8899a;
+    /* Pink hover effect in the footer */
+}
