@@ -279,6 +279,34 @@ footer {
     padding: 2em 0;
     font-size: 0.9rem;
 }
+.footer-phone {
+    background-color: #d87288;
+    /* Matches the brand color */
+    color: white;
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.footer-phone:hover {
+    background-color: #b85b6e;
+    /* Slightly darker shade on hover */
+    transform: scale(1.1);
+    /* Add a zoom effect */
+}
+
+.footer-phone i {
+    font-size: 1.5rem;
+    /* Ensure the icon is properly sized */
+}
 
 .footer-content {
     display: flex;
