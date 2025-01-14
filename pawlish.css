@@ -37,6 +37,13 @@ header {
 .title {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.title:hover {
+    color: #ffe8e8;
 }
 
 .header-right {
@@ -216,7 +223,6 @@ header {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    text-align: left;
 }
 
 .services td {
@@ -228,7 +234,6 @@ header {
     font-weight: bold;
     background-color: #ffe5ea;
     color: #e8899a;
-    text-align: left;
 }
 
 /* Contact Section */
@@ -292,76 +297,34 @@ header {
     background-color: #d87288;
 }
 
-/* Footer */
-footer {
-    background-color: #444;
-    color: white;
-    text-align: center;
-    padding: 2em 0;
-    font-size: 0.9rem;
-}
-
-.footer-links {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    margin-top: 1em;
-}
-
-.footer-links a {
-    font-size: 1.5rem;
-    color: white;
-    transition: color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #e8899a;
-    transform: scale(1.1);
-}
-
-.footer-phone {
-    background-color: #d87288;
-    color: white;
-    padding: 0.3em;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.footer-phone:hover {
-    background-color: #b85b6e;
-    transform: scale(1.1);
-}
-
 /* Hamburger Icon Styling */
 .hamburger {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 2.5rem;
-    width: 3rem;
     padding: 0;
 }
 
 .hamburger span {
     display: block;
-    height: 4px;
+    height: 3px;
     width: 100%;
     background-color: white;
     border-radius: 2px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger span+span {
+    margin-top: 4px;
 }
 
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
+    transform: rotate(45deg) translateY(6px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -369,9 +332,10 @@ footer {
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
+    transform: rotate(-45deg) translateY(-6px);
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -425,79 +389,249 @@ footer {
     .hamburger {
         display: flex;
     }
-}/* Title Link */
-.title {
-    font-size: 1.5rem;
-    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #444;
     color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9rem;
 }
 
-.title:hover {
-    color: #ffe8e8;
+/* Footer */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 2em 0 3em;
+    font-size: 0.9rem;
+    position: relative;
 }
 
-/* Hamburger Button Styling */
-.hamburger {
+.footer-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 2rem;
-    /* Adjusted width */
-    height: 1.5rem;
-    /* Adjusted height */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+    align-items: center;
+    gap: 1em;
 }
 
-.hamburger span {
-    display: block;
-    height: 3px;
-    /* Thickness of the lines */
-    width: 100%;
-    /* Full width */
-    background-color: white;
-    /* White lines */
-    border-radius: 2px;
-    /* Slight rounding for smoothness */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    /* Animation for active state */
+/* Footer Phone Button */
+.footer-phone {
+    background-color: #d87288;
+    color: white;
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    /* Remove underline */
 }
 
-/* Spacing between the lines */
-.hamburger span+span {
-    margin-top: 4px;
-    /* Reduced spacing for compact look */
+.footer-phone:hover {
+    background-color: #b85b6e;
+    /* Darker pink on hover */
 }
 
-/* Active State for Hamburger */
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(6px);
+/* Social Media Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-    /* Hides the middle line */
+.footer-links a {
+    font-size: 1.5rem;
+    color: white;
+    /* Default color */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-6px);
+.footer-links a:hover {
+    color: #e8899a;
+    /* Highlight on hover */
+    transform: scale(1.1);
+    /* Slight zoom */
 }
 
-/* Responsive Adjustments */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-    .hamburger {
-        width: 2.5rem;
-        /* Slightly larger on smaller screens */
+    .footer-phone {
+        width: 2rem;
         height: 2rem;
-        padding: 0.5em
+        font-size: 1rem;
     }
 
-    .hamburger span {
-        height: 4px;
-        /* Thicker lines for visibility */
+    .footer-links a {
+        font-size: 1.2rem;
+        /* Smaller icons */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Footer Phone Button */
+.footer-phone {
+    background-color: #d87288;
+    color: white;
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    position: relative;
+    /* Fix positioning issues */
+}
+
+.footer-phone:hover {
+    background-color: #b85b6e;
+}
+
+/* Social Media Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    /* Add spacing between icons */
+}
+
+.footer-links a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #e8899a;
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+}
+
+/* Fix Blue Icon Styling */
+.footer-links a i {
+    color: white;
+    /* Force icon color to white */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .footer-phone {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 1.2rem;
+        /* Smaller icons */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Footer Phone Button */
+.footer-phone {
+    background-color: #d87288;
+    color: white;
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    position: relative;
+    /* Fix positioning issues */
+}
+
+.footer-phone:hover {
+    background-color: #b85b6e;
+}
+
+/* Social Media Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    /* Add spacing between icons */
+}
+
+.footer-links a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #e8899a;
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+}
+
+/* Fix Blue Icon Styling */
+.footer-links a i {
+    color: white;
+    /* Force icon color to white */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .footer-phone {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 1.2rem;
+        /* Smaller icons */
     }
 }
