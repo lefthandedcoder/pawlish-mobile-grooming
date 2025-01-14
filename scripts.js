@@ -1,16 +1,18 @@
-// Toggle menu when the hamburger button is clicked
-document.querySelector(".hamburger").addEventListener("click", function () {
-  const navMenu = document.querySelector(".nav-menu");
-  navMenu.classList.toggle("active");
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
 });
 
-// Collapse menu when a navigation link is clicked
-document.querySelectorAll(".nav-menu a").forEach((link) => {
-  link.addEventListener("click", function () {
-    const navMenu = document.querySelector(".nav-menu");
-    navMenu.classList.remove("active");
-  });
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
 });
+
 
 // Handle contact form submission
 document
